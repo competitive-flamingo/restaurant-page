@@ -1,6 +1,6 @@
 export const home = (function() {
-    const h1 = document.createElement("h1");
-    h1.appendChild(document.createTextNode("Ocean's Catch Restaurant"));
+    const pageHeader = document.createElement("h1");
+    pageHeader.textContent = "Ocean's Catch Restaurant";
     const description = document.createElement("div");
     description.className = "description";
     description.appendChild(document.createTextNode("At Ocean's Catch, we pride ourselves on serving the freshest seafood, straight from the ocean to your plate. Whether you're a fan of grilled fish, fried favorites, or savory seafood stews, we have something to satisfy every palate. Our chefs prepare every dish with passion and precision, ensuring a flavorful dining experience for all seafood lovers.Come enjoy our cozy atmosphere, friendly service, and a taste of the sea right here in the heart of the city!"))
@@ -25,8 +25,8 @@ export const home = (function() {
     const details = document.createElement("div");
     details.className = "details";
     details.append(description, workHours, location);
-    return {
-        h1,
+    return [
+        pageHeader,
         details,
-    }
+    ]
 })();
